@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="FinancieelBrancheOverzicht">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Bedrijfstakken_branches_SBI_2008" type="xs:string"/>
+				<xs:element name="Perioden" type="xs:string"/>
+				<xs:element name="Totaal_bedrijven_aantal" type="xs:int"/>
+				<xs:element name="Bedrijfsgrootte_1_werkzaam_persoon_aantal" type="xs:int"/>
+				<xs:element name="Bedrijfsgrootte_2_werkzame_personen_aantal" type="xs:int"/>
+				<xs:element name="Bedrijfsgrootte_3_tot_5_werkzame_personen_aantal" type="xs:int"/>
+				<xs:element name="Bedrijfsgrootte_5_tot_10_werkzame_personen_aantal" type="xs:int"/>
+				<xs:element name="Bedrijfsgrootte_10_tot_20_werkzame_personen_aantal" type="xs:int"/>
+				<xs:element name="Bedrijfsgrootte_20_tot_50_werkzame_personen_aantal" type="xs:int"/>
+				<xs:element name="Bedrijfsgrootte_50_tot_100_werkzame_personen_aantal" type="xs:int"/>
+				<xs:element name="Rechtsvorm_Natuurlijke_personen_aantal" type="xs:int"/>
+				<xs:element name="Rechtspersonen_aantal" type="xs:int"/>
+				<xs:element name="Investeringen_in_materiële_vaste_activa_mln" type="xs:double"/>
+				<xs:element name="Type_gefailleerde" type="xs:string"/>
+				<xs:element name="Uitgesproken_faillissementen_Aantal" type="xs:int"/>
+			</xs:sequence>
+			<xs:attribute name="id" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
