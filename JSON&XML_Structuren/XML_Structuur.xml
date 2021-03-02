@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FinancieelBrancheOverzicht id="">
+	<Bedrijfstakken_branches_SBI_2008></Bedrijfstakken_branches_SBI_2008>
+	<Perioden></Perioden>
+	<Totaal_bedrijven_aantal></Totaal_bedrijven_aantal>
+	<Bedrijfsgrootte_1_werkzaam_persoon_aantal></Bedrijfsgrootte_1_werkzaam_persoon_aantal>
+	<Bedrijfsgrootte_2_werkzame_personen_aantal></Bedrijfsgrootte_2_werkzame_personen_aantal>
+	<Bedrijfsgrootte_3_tot_5_werkzame_personen_aantal></Bedrijfsgrootte_3_tot_5_werkzame_personen_aantal>
+	<Bedrijfsgrootte_5_tot_10_werkzame_personen_aantal></Bedrijfsgrootte_5_tot_10_werkzame_personen_aantal>
+	<Bedrijfsgrootte_10_tot_20_werkzame_personen_aantal></Bedrijfsgrootte_10_tot_20_werkzame_personen_aantal>
+	<Bedrijfsgrootte_20_tot_50_werkzame_personen_aantal></Bedrijfsgrootte_20_tot_50_werkzame_personen_aantal>
+	<Bedrijfsgrootte_50_tot_100_werkzame_personen_aantal></Bedrijfsgrootte_50_tot_100_werkzame_personen_aantal>
+	<Rechtsvorm_Natuurlijke_personen_aantal></Rechtsvorm_Natuurlijke_personen_aantal>
+	<Rechtspersonen_aantal></Rechtspersonen_aantal>
+	<Investeringen_in_materiële_vaste_activa_mln euro></Investeringen_in_materiële_vaste_activa_mln euro>
+	<Type_gefailleerde></Type_gefailleerde>
+	<Uitgesproken_faillissementen_Aantal></Uitgesproken_faillissementen_Aantal>
+</FinancieelBrancheOverzicht>
