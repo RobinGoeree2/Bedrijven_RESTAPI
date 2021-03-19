@@ -2,13 +2,13 @@
 	"$schema": "http://json-schema.org/draft-07/schema#",
 	"$id": "FinancieelBrancheOverzicht",
 	"title": "Financieel Branche Overzicht",
-	"description": "Een overzicht over de fininciele zaken van bedrijven uit verschillende branches"
+	"description": "Een overzicht over de fininciele zaken van bedrijven uit verschillende branches",
 	"type": "object",
 	"properties": {
 	"OverzichtID": {
 		"description": "De unieke identifier voor de gegevens",
 		"type": "integer"
-	}
+	},
 	"Bedrijfstakken/branches_SBI_2008": {
 		"description": "Een bedrijfs branche uit de gekozen SBI van 2008",
 		"type": "string"
