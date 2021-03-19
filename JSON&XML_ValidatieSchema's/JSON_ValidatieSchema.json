@@ -59,7 +59,7 @@
 	},
 	"Investeringen_in_materiële_vaste_activa": {
 		"description": "De investeringen in materiële vaste activa in miljoenen euros",
-		"type": "integer"
+		"type": "double"
 	},
 	"Type_gefailleerde": {
 		"description": "Het type bedrijf dat gefailleerd is",

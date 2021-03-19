@@ -15,7 +15,7 @@
 				<xs:element name="Bedrijfsgrootte_50_tot_100_werkzame_personen_aantal" type="xs:int"/>
 				<xs:element name="Rechtsvorm_Natuurlijke_personen_aantal" type="xs:int"/>
 				<xs:element name="Rechtspersonen_aantal" type="xs:int"/>
-				<xs:element name="Investeringen_in_materiële_vaste_activa_mln" type="xs:double"/>
+				<xs:element name="Investeringen_in_materiële_vaste_activa" type="xs:double"/>
 				<xs:element name="Type_gefailleerde" type="xs:string"/>
 				<xs:element name="Uitgesproken_faillissementen_Aantal" type="xs:int"/>
 			</xs:sequence>
