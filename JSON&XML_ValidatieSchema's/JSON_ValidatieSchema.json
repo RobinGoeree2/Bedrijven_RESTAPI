@@ -67,12 +67,7 @@
 	},
 	"Uitgesproken_faillissementen": {
 		"description": "Het aantal uitgesproken faillissementen van bedrijven",
-		"type": "string"
-	},
-	"": {
-		"description": "The price of the product",
-		"type": "number",
-		"exclusiveMinimum": 0
+		"type": "integer"
 	},
 	"required": [ "OverzichtID", "Bedrijfstakken/branches_SBI_2008", "Perioden", "Totaal_bedrijven", "Rechtsvorm_Natuurlijke_personen", "Rechtsvorm_Rechtspersonen", "Investeringen_in_materiële_vaste_activa", "Type_gefailleerde", "Uitgesproken_faillissementen", ]
 }
