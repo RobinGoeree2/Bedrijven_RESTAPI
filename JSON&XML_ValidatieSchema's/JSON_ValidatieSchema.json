@@ -1,0 +1,78 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "FinancieelBrancheOverzicht",
+	"title": "Financieel Branche Overzicht",
+	"description": "Een overzicht over de fininciele zaken van bedrijven uit verschillende branches"
+	"type": "object",
+	"properties": {
+	"OverzichtID": {
+		"description": "De unieke identifier voor de gegevens",
+		"type": "integer"
+	}
+	"Bedrijfstakken/branches_SBI_2008": {
+		"description": "Een bedrijfs branche uit de gekozen SBI van 2008",
+		"type": "string"
+	},
+	"Perioden": {
+		"description": "Kan bestaan uit een maand-, kwaartal van/of een jaartal",
+		"type": "string"
+	},
+	"Totaal_bedrijven": {
+		"description": "Het totaal aantal geregistreerde bedrijven in de branche",
+		"type": "integer"
+	},
+	"Bedrijfsgrootte_1_werkzaam_persoon": {
+		"description": "Het totaal aantal bedrijven wat beschikt over 1 werkzaam persoon",
+		"type": "integer"
+	},
+	"Bedrijfsgrootte_2_werkzame_personen": {
+		"description": "Het totaal aantal bedrijven wat beschikt over 2 werkzame personen",
+		"type": "integer"
+	},
+	"Bedrijfsgrootte_3_tot_5_werkzame_personen": {
+		"description": "Het totaal aantal bedrijven wat beschikt over 3 tot 5 werkzame personen",
+		"type": "integer"
+	},
+	"Bedrijfsgrootte_5_tot_10_werkzame_personen": {
+		"description": "Het totaal aantal bedrijven wat beschikt over 5 tot 10 werkzame personen",
+		"type": "integer"
+	},
+	"Bedrijfsgrootte_10_tot_20_werkzame_personen": {
+		"description": "Het totaal aantal bedrijven wat beschikt over 10 tot 20 werkzame personen",
+		"type": "integer"
+	},
+	"Bedrijfsgrootte_20_tot_50_werkzame_personen": {
+		"description": "Het totaal aantal bedrijven wat beschikt over 20 tot 50 werkzame personen",
+		"type": "integer"
+	},
+	"Bedrijfsgrootte_50_tot_100_werkzame_personen": {
+		"description": "Het totaal aantal bedrijven wat beschikt over 50 tot 100 werkzame personen",
+		"type": "integer"
+	},
+	"Rechtsvorm_Natuurlijke_personen": {
+		"description": "Het totaal aantal bedrijven dat een natuurlijke personen rechtsvorm had",
+		"type": "integer"
+	},
+	"Rechtsvorm_Rechtspersonen": {
+		"description": "Het totaal aantal bedrijven dat een rechtspersonen rechtsvorm had",
+		"type": "integer"
+	},
+	"Investeringen_in_materiële_vaste_activa": {
+		"description": "De investeringen in materiële vaste activa in miljoenen euros",
+		"type": "integer"
+	},
+	"Type_gefailleerde": {
+		"description": "Het type bedrijf dat gefailleerd is",
+		"type": "string"
+	},
+	"Uitgesproken_faillissementen": {
+		"description": "Het aantal uitgesproken faillissementen van bedrijven",
+		"type": "string"
+	},
+	"": {
+		"description": "The price of the product",
+		"type": "number",
+		"exclusiveMinimum": 0
+	},
+	"required": [ "OverzichtID", "Bedrijfstakken/branches_SBI_2008", "Perioden", "Totaal_bedrijven", "Rechtsvorm_Natuurlijke_personen", "Rechtsvorm_Rechtspersonen", "Investeringen_in_materiële_vaste_activa", "Type_gefailleerde", "Uitgesproken_faillissementen", ]
+}

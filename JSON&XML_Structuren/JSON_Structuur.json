@@ -1,19 +1,19 @@
-[
+{
 	"FinancieelBrancheOverzicht": {
-		"Bedrijfstakken/branches SBI 2008": "",
+		"Bedrijfstakken/branches_SBI_2008": "",
 		"Perioden": "",
-		"Totaal bedrijven (aantal)": "",
-		"Bedrijfsgrootte 1 werkzaam persoon (aantal)": "",
-		"2 werkzame personen (aantal)": ,
-		"3 tot 5 werkzame personen (aantal)": ,
-		"5 tot 10 werkzame personen (aantal)": ,
-		"10 tot 20 werkzame personen (aantal)": ,
-		"20 tot 50 werkzame personen (aantal)": ,
-		"50 tot 100 werkzame personen (aantal)": ,
-		"Rechtsvorm Natuurlijke personen (aantal)": "",
-		"Rechtspersonen (aantal)": ,
-		"Investeringen in materiële vaste activa (mln euro)": "",
-		"Type gefailleerde": "",
-		"Uitgesproken faillissementen (Aantal)": 
+		"Totaal_bedrijven": "",
+		"Bedrijfsgrootte_1_werkzaam_persoon": "",
+		"Bedrijfsgrootte_2_werkzame_personen": ,
+		"Bedrijfsgrootte_3_tot_5_werkzame_personen": ,
+		"Bedrijfsgrootte_5_tot_10_werkzame_personen": ,
+		"Bedrijfsgrootte_10_tot_20_werkzame_personen": ,
+		"Bedrijfsgrootte_20_tot_50_werkzame_personen": ,
+		"Bedrijfsgrootte_50_tot_100_werkzame_personen": ,
+		"Rechtsvorm_Natuurlijke_personen": "",
+		"Rechtsvorm_Rechtspersonen": ,
+		"Investeringen_in_materiële_vaste_activa": "",
+		"Type_gefailleerde": "",
+		"Uitgesproken_faillissementen":
 	}
-]
+}
