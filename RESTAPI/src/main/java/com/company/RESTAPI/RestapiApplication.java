@@ -34,9 +34,5 @@ public class RestapiApplication
 		this.persoon = person;
 	}
 
-	@DeleteMapping("restapi/v1/deleteperson")
-	public void deletePerson()
-	{
-		this.persoon = null;
-	}
+
 }
