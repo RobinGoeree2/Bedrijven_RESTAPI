@@ -3,20 +3,24 @@ package Database;
 import java.sql.Connection;
 import java.sql.DriverManager;
 
-public class DBConnect
+public abstract class DBConnect
 {
-    public static void main(String[] args) {
-        String MySQLURL = "jdbc:mysql://localhost:3306/bedrijven_restapi";
-        String databseUserName = "root";
-        String databasePassword = "";
-        Connection con = null;
+    private String MySQLURL = "jdbc:mysql://localhost:3306/bedrijven_restapi";
+    private String databseUserName = "root";
+    private String databasePassword = "";
+    private Connection con = null;
+
+    public Connection getDBConnection()
+    {
         try {
             con = DriverManager.getConnection(MySQLURL, databseUserName, databasePassword);
             if (con != null) {
-                System.out.println("Database connection is successful !!!!");
+                //System.out.println("Database connection is successful !!!!");
+                return con;
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
+        return null;
     }
 }

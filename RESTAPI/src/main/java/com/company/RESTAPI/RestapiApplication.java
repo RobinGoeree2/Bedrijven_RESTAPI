@@ -1,42 +1,42 @@
 package com.company.RESTAPI;
 
+import Database.DBFaillissementen;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.util.ArrayList;
 
 @SpringBootApplication
 @RestController
 public class RestapiApplication
 {
-	private Person persoon;
+	DBFaillissementen dbFaillissementen = new DBFaillissementen();
 
 	public static void main(String[] args)
 	{
 		SpringApplication.run(RestapiApplication.class, args);
 	}
 
-	//@GetMapping("/hello")
-	//public String hello(@RequestParam(value = "name", defaultValue = "World") String name)
-	//{
-	//	return String.format("Hello %s!", name);
-	//}
-
-	@GetMapping("/restapi/v1/getperson")
-	public Person getPerson()
+	@GetMapping("/restapi/v1/getOverzichtFaillissementen")
+	public ArrayList<APIFaillissementen> getOverzichtFaillissementen()
 	{
-		return this.persoon;
+		return dbFaillissementen.allFaillissementen();
 	}
 
+	/*
 	@PostMapping
 	@RequestMapping("restapi/v1/addperson")
-	public void addPerson(@RequestBody Person person)
+	public void addPerson(@RequestBody APIFaillissementen )
 	{
-		this.persoon = person;
+
 	}
 
 	@DeleteMapping("restapi/v1/deleteperson")
 	public void deletePerson()
 	{
-		this.persoon = null;
+
 	}
+	 */
 }
