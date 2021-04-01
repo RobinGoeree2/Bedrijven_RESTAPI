@@ -3,8 +3,7 @@ package com.company.RESTAPI;
 import Database.DBFaillissementen;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 
@@ -25,14 +24,15 @@ public class RestapiApplication
 		return dbFaillissementen.allFaillissementen();
 	}
 
-	/*
-	@PostMapping
-	@RequestMapping("restapi/v1/addperson")
-	public void addPerson(@RequestBody APIFaillissementen )
-	{
 
+	@PostMapping
+	@RequestMapping("restapi/v1/addFaillissement")
+	public void addPerson(@RequestBody APIFaillissementen faillissement)
+	{
+		dbFaillissementen.addFaillissement(faillissement);
 	}
 
+	/*
 	@DeleteMapping("restapi/v1/deleteperson")
 	public void deletePerson()
 	{

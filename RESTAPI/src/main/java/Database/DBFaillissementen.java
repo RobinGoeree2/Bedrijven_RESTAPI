@@ -34,4 +34,25 @@ public class DBFaillissementen extends DBConnect
         }
         return null;
     }
+
+    public void addFaillissement(APIFaillissementen faillissement)
+    {
+        try{
+            stmt = getDBConnection().createStatement();
+
+            int overzichtID = faillissement.getOverzichtID();
+            String typeGefailleerd = faillissement.getTypeGefailleerd();
+            String branche = faillissement.getBranche();
+            String periode = faillissement.getPeriode();
+            int uitgesprokenFaillissementen = faillissement.getUitgesprokenFaillissementen();
+
+            stmt.executeUpdate("INSERT INTO financieel_branche_overzicht_faillissementen(OverzichtID, Type_gefailleerde, Branche, Periode, Uitgesproken_faillissementen) VALUES ("+overzichtID+",'"+typeGefailleerd+"','"+branche+"','"+periode+"',"+uitgesprokenFaillissementen+")");
+
+            getDBConnection().close();
+        }
+        catch (SQLException throwables)
+        {
+            throwables.printStackTrace();
+        }
+    }
 }
