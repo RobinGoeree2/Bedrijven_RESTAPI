@@ -11,10 +11,10 @@ public class APIFaillissementen
     private int uitgesprokenFaillissementen;
 
     public APIFaillissementen(@JsonProperty("overzichtID") int overzichtID,
-                              @JsonProperty("typeGefailleerd") String typeGefailleerd,
+                              @JsonProperty("type_gefailleerd") String typeGefailleerd,
                               @JsonProperty("branche") String branche,
                               @JsonProperty("periode") String periode,
-                              @JsonProperty("uitgesprokenFaillissementen") int uitgesprokenFaillissementen)
+                              @JsonProperty("uitgesproken_faillissementen") int uitgesprokenFaillissementen)
     {
         this.overzichtID = overzichtID;
         this.typeGefailleerd = typeGefailleerd;

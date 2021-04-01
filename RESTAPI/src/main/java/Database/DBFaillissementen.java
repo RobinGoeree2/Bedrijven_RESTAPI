@@ -55,4 +55,34 @@ public class DBFaillissementen extends DBConnect
             throwables.printStackTrace();
         }
     }
+
+    public void delFaillissement(int id)
+    {
+        try{
+            stmt = getDBConnection().createStatement();
+
+            stmt.executeUpdate("DELETE FROM financieel_branche_overzicht_faillissementen WHERE OverzichtID="+id);
+
+            getDBConnection().close();
+        }
+        catch (SQLException throwables)
+        {
+            throwables.printStackTrace();
+        }
+    }
+
+    public void putFaillissementen(APIFaillissementen faillissement)
+    {
+        try{
+            stmt = getDBConnection().createStatement();
+
+            stmt.executeUpdate("UPDATE financieel_branche_overzicht_faillissementen SET OverzichtID="+faillissement.getOverzichtID()+",Type_gefailleerde='"+faillissement.getTypeGefailleerd()+"',Branche='"+faillissement.getBranche()+"',Periode='"+faillissement.getPeriode()+"',Uitgesproken_faillissementen='"+faillissement.getUitgesprokenFaillissementen()+"' WHERE OverzichtID="+faillissement.getOverzichtID());
+
+            getDBConnection().close();
+        }
+        catch (SQLException throwables)
+        {
+            throwables.printStackTrace();
+        }
+    }
 }
