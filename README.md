@@ -60,6 +60,7 @@ Door het programma Xampp weer te openen kan er gekeken worden dat de Tomcat serv
 ### Postman
 Als bovenstaande instructies zijn opgevolgd dan kan er via het programma Postman met de API & Database data uitwisselen.
 De Api documentatie is te vinden in de map 'API_documentatie'.
+Link naar de API documentatie van Postman zelf: https://documenter.getpostman.com/view/12502982/TzCP6Se5#9770aca7-8b43-4242-8a0e-3ed5a5b89fdd
 In onderstaande foto is te zien hoe de Postman eruit ziet na het importeren van de api documentatie, hier is ook een api commando uitgevoerd.
 ![PostmanVoorbeeld](https://user-images.githubusercontent.com/56107687/113419948-bdae6f80-93c8-11eb-8a74-b3e96f9e8cb0.png)
 
