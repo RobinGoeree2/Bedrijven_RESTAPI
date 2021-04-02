@@ -7,10 +7,11 @@
 
 ## Instructie installatie
 
-#### Download en installeer de nieuwste versie van Xampp:
+#### Download en installeer Xampp:
 https://www.apachefriends.org/index.html
 
-#### Na de installatie start Xampp.
+#### Start Xampp.
+Na de installatie start het programma Xampp op.
 ![Xamppstart](https://user-images.githubusercontent.com/56107687/113418177-43302080-93c5-11eb-9f91-434d4319b9d5.png)
 Op de foto staat een oudere versie, dit heeft een bellemeringen op de user interface instructie.
 
@@ -34,6 +35,7 @@ Voor dit project is versie 2020.2.1 of nieuwer benodigd, wanneer Intellij IDEA a
 https://www.jetbrains.com/idea/
 
 #### Open Java project
+Download het project van deze github, de java files zijn te vinden in de map 'RESTAPI'. 
 Start Intellij IDEA en klik op 'Open or Import'.
 ![IntellijStart](https://user-images.githubusercontent.com/56107687/113418975-cd2cb900-93c6-11eb-8fcd-457ec920fa4c.png)
 
@@ -55,4 +57,9 @@ Als het bestand 'RestapiApplication' aan het runnen is ziet het scherm er ongeve
 ![intellijAPIRunning](https://user-images.githubusercontent.com/56107687/113419398-acb12e80-93c7-11eb-8569-cd517d6bcbaa.png)
 Door het programma Xampp weer te openen kan er gekeken worden dat de Tomcat server automatisch is aangezet door het runnen van het project in Intellij IDEA.
 
+### Postman
+Als bovenstaande instructies zijn opgevolgd dan kan er via het programma Postman met de API & Database data uitwisselen.
+De Api documentatie is te vinden in de map 'API_documentatie'.
+In onderstaande foto is te zien hoe de Postman eruit ziet na het importeren van de api documentatie, hier is ook een api commando uitgevoerd.
+![PostmanVoorbeeld](https://user-images.githubusercontent.com/56107687/113419948-bdae6f80-93c8-11eb-8a74-b3e96f9e8cb0.png)
 
