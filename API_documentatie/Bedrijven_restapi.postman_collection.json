@@ -1,0 +1,346 @@
+{
+	"info": {
+		"_postman_id": "3f917268-417c-435d-aacd-87fb82109abb",
+		"name": "Bedrijven_restapi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Faillissementen",
+			"item": [
+				{
+					"name": "localhost:8080/restapi/v1/faillissementen",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/restapi/v1/faillissementen",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"restapi",
+								"v1",
+								"faillissementen"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/restapi/v1/faillissementen",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"overzichtID\": 0,\r\n        \"typeGefailleerd\": \"\",\r\n        \"branche\": \"\",\r\n        \"periode\": \"\",\r\n        \"uitgesprokenFaillissementen\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/restapi/v1/faillissementen",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"restapi",
+								"v1",
+								"faillissementen"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/restapi/v1/faillissementen/{id}",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/restapi/v1/faillissementen/{id}",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"restapi",
+								"v1",
+								"faillissementen",
+								"{id}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/restapi/v1/faillissement",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"overzichtID\": 0,\r\n        \"typeGefailleerd\": \"\",\r\n        \"branche\": \"\",\r\n        \"periode\": \"\",\r\n        \"uitgesprokenFaillissementen\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/restapi/v1/faillissement",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"restapi",
+								"v1",
+								"faillissement"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Bedrijven",
+			"item": [
+				{
+					"name": "localhost:8080/restapi/v1/bedrijven",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/restapi/v1/bedrijven",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"restapi",
+								"v1",
+								"bedrijven"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/restapi/v1/bedrijven",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"overzichtID\": 0,\r\n        \"branche\": \"\",\r\n        \"periode\": \"\",\r\n        \"totaal_bedrijven\": 0,\r\n        \"bedrijfsgrootte_1_werkzame_personen\": 0,\r\n        \"bedrijfsgrootte_2_werkzame_personen\": 0,\r\n        \"bedrijfsgrootte_3_tot_5_werkzame_personen\": 0,\r\n        \"bedrijfsgrootte_5_tot_10_werkzame_personen\": 0,\r\n        \"bedrijfsgrootte_10_tot_20_werkzame_personen\": 0,\r\n        \"bedrijfsgrootte_20_tot_50_werkzame_personen\": 0,\r\n        \"bedrijfsgrootte_50_tot_100_werkzame_personen\": 0,\r\n        \"rechtsvorm_natuurlijkePersonen\": 0,\r\n        \"rechtsvorm_rechtsPersonen\": 0\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/restapi/v1/bedrijven",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"restapi",
+								"v1",
+								"bedrijven"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/restapi/v1/bedrijven/{id}",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/restapi/v1/bedrijven/{id}",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"restapi",
+								"v1",
+								"bedrijven",
+								"{id}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/restapi/v1/bedrijven",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"overzichtID\": 0,\r\n        \"branche\": \"\",\r\n        \"periode\": \"\",\r\n        \"totaal_bedrijven\": 0,\r\n        \"bedrijfsgrootte_1_werkzame_personen\": 0,\r\n        \"bedrijfsgrootte_2_werkzame_personen\": 0,\r\n        \"bedrijfsgrootte_3_tot_5_werkzame_personen\": 0,\r\n        \"bedrijfsgrootte_5_tot_10_werkzame_personen\": 0,\r\n        \"bedrijfsgrootte_10_tot_20_werkzame_personen\": 0,\r\n        \"bedrijfsgrootte_20_tot_50_werkzame_personen\": 0,\r\n        \"bedrijfsgrootte_50_tot_100_werkzame_personen\": 0,\r\n        \"rechtsvorm_natuurlijkePersonen\": 0,\r\n        \"rechtsvorm_rechtsPersonen\": 0\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/restapi/v1/bedrijven",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"restapi",
+								"v1",
+								"bedrijven"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Investeringen",
+			"item": [
+				{
+					"name": "localhost:8080/restapi/v1/investeringen",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/restapi/v1/investeringen",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"restapi",
+								"v1",
+								"investeringen"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/restapi/v1/investeringen",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"overzichtID\": 0,\r\n        \"branche\": \"\",\r\n        \"periode\": \"\",\r\n        \"investeringen_in_materiële_vaste_activa\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/restapi/v1/investeringen",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"restapi",
+								"v1",
+								"investeringen"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/restapi/v1/investeringen/{id}",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/restapi/v1/investeringen/{id}",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"restapi",
+								"v1",
+								"investeringen",
+								"{id}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/restapi/v1/investeringen",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"overzichtID\": 0,\r\n        \"branche\": \"\",\r\n        \"periode\": \"\",\r\n        \"investeringen_in_materiële_vaste_activa\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/restapi/v1/investeringen",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"restapi",
+								"v1",
+								"investeringen"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Financieel Branche Overzicht",
+			"item": [
+				{
+					"name": "localhost:8080/restapi/v1/financieelBrancheOverzicht",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/restapi/v1/financieelBrancheOverzicht",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"restapi",
+								"v1",
+								"financieelBrancheOverzicht"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
