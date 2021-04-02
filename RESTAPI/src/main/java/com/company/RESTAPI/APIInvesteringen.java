@@ -11,7 +11,7 @@ public class APIInvesteringen
 
     public APIInvesteringen(@JsonProperty("overzichtID") int overzichtID,
                             @JsonProperty("branche") String branche,
-                            @JsonProperty("periode")String periode,
+                            @JsonProperty("periode") String periode,
                             @JsonProperty("investeringen_in_materiële_vaste_activa") double investeringMaterieleVasteActiva)
     {
         this.overzichtID = overzichtID;

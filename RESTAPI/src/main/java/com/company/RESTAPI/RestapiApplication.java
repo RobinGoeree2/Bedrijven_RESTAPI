@@ -13,13 +13,73 @@ import java.util.ArrayList;
 @RestController
 public class RestapiApplication
 {
-	DBFaillissementen dbFaillissementen = new DBFaillissementen();
-	DBBedrijven dbBedrijven = new DBBedrijven();
-	DBInvesteringen dbInvesteringen = new DBInvesteringen();
+	private DBFaillissementen dbFaillissementen = new DBFaillissementen();
+	private DBBedrijven dbBedrijven = new DBBedrijven();
+	private DBInvesteringen dbInvesteringen = new DBInvesteringen();
 
 	public static void main(String[] args)
 	{
 		SpringApplication.run(RestapiApplication.class, args);
+	}
+
+	////////////////////////////////////////////////////
+	// API commands voor financieel branche overzicht //
+	////////////////////////////////////////////////////
+
+	@GetMapping("/restapi/v1/financieelBrancheOverzicht")
+	public ArrayList<APIFinancieelBrancheOverzicht> getfinancieelBrancheOverzichten()
+	{
+		RestapiApplication restapiApplication = new RestapiApplication();
+		ArrayList<APIFinancieelBrancheOverzicht> financieelBrancheOverzichten = new ArrayList<>();
+		String branche = "";
+		APIBedrijven apiBedrijven = null;
+		APIInvesteringen apiInvesteringen = null;
+		APIFaillissementen apiFaillissementen = null;
+
+		//Ophalen van alle gegevens over bedrijfs branches
+		//Limiet van 0..28 omdat bij een dynamische berekening de foutcode van sql 'too many connections' naar voren komt
+		for (int i = 0; i < 28; i++)
+		{
+			financieelBrancheOverzichten.add(new APIFinancieelBrancheOverzicht(restapiApplication.getBedrijven().get(i).getOverzichtID(), restapiApplication.getBedrijven().get(i).getBranche(), restapiApplication.getBedrijven().get(i), restapiApplication.getInvesteringen().get(i), restapiApplication.getFaillissementen().get(i)));
+
+			/*
+			//Probeersel om er voor te zorgen dat elk object bestaat uit dezelfde branche, sql foutmelding too many connections
+
+			if(restapiApplication.getBedrijven().get(i).getBranche() != branche)
+			{
+				branche = restapiApplication.getBedrijven().get(i).getBranche();
+			}
+
+			apiBedrijven = restapiApplication.getBedrijven().get(i);
+
+			for (int j = 0; j < restapiApplication.getInvesteringen().size(); j++)
+			{
+				if(restapiApplication.getInvesteringen().get(j).getBranche().equals(branche))
+				{
+					apiInvesteringen = restapiApplication.getInvesteringen().get(j);
+				}
+			}
+
+			for (int j = 0; j < restapiApplication.getFaillissementen().size(); j++)
+			{
+				if(restapiApplication.getFaillissementen().get(j).getBranche().equals(branche))
+				{
+					apiFaillissementen = restapiApplication.getFaillissementen().get(j);
+				}
+			}
+
+			financieelBrancheOverzichten.add(new APIFinancieelBrancheOverzicht(restapiApplication.getBedrijven().get(i).getOverzichtID(), restapiApplication.getBedrijven().get(i).getBranche(),
+											restapiApplication.getBedrijven().get(i).getPeriode(), restapiApplication.getBedrijven().get(i).getTotaalBedrijven(), restapiApplication.getBedrijven().get(i).getBedrijfsgrootte1WerkzaamPersoon(),
+											restapiApplication.getBedrijven().get(i).getBedrijfsgrootte2WerkzaamPersoon(), restapiApplication.getBedrijven().get(1).getBedrijfsgrootte3tot5WerkzaamPersoon(),
+											restapiApplication.getBedrijven().get(i).getBedrijfsgrootte5tot10WerkzaamPersoon(), restapiApplication.getBedrijven().get(i).getBedrijfsgrootte10tot20WerkzaamPersoon(),
+											restapiApplication.getBedrijven().get(i).getBedrijfsgrootte20tot50WerkzaamPersoon(), restapiApplication.getBedrijven().get(i).getBedrijfsgrootte50tot100WerkzaamPersoon(),
+											restapiApplication.getBedrijven().get(i).getNatuurlijkPersoon(), restapiApplication.getBedrijven().get(i).getRechtsPersoon(), restapiApplication.getInvesteringen().get(i).getInvesteringMaterieleVasteActiva(),
+											restapiApplication.getFaillissementen().get(i).getTypeGefailleerd(), restapiApplication.getFaillissementen().get(i).getUitgesprokenFaillissementen()));
+
+			financieelBrancheOverzichten.add(new APIFinancieelBrancheOverzicht(apiBedrijven.getOverzichtID(), apiBedrijven.getBranche(), apiBedrijven.getPeriode(), apiBedrijven.getTotaalBedrijven(), apiBedrijven.getBedrijfsgrootte1WerkzaamPersoon(), apiBedrijven.getBedrijfsgrootte2WerkzaamPersoon(), apiBedrijven.getBedrijfsgrootte3tot5WerkzaamPersoon(), apiBedrijven.getBedrijfsgrootte5tot10WerkzaamPersoon(), apiBedrijven.getBedrijfsgrootte10tot20WerkzaamPersoon(), apiBedrijven.getBedrijfsgrootte20tot50WerkzaamPersoon(), apiBedrijven.getBedrijfsgrootte50tot100WerkzaamPersoon(), apiBedrijven.getNatuurlijkPersoon(), apiBedrijven.getRechtsPersoon(), apiInvesteringen.getPeriode(), apiInvesteringen.getInvesteringMaterieleVasteActiva(), apiFaillissementen.getPeriode(), apiFaillissementen.getTypeGefailleerd(), apiFaillissementen.getUitgesprokenFaillissementen()));
+			*/
+		}
+		return financieelBrancheOverzichten;
 	}
 
 	///////////////////////////////////////
