@@ -40,28 +40,14 @@ public class DBBedrijven extends DBConnect
         try{
             stmt = getDBConnection().createStatement();
 
-            int overzichtID = bedrijf.getOverzichtID();
-            String branche = bedrijf.getBranche();
-            String periode = bedrijf.getPeriode();
-            int totaalBedrijven = bedrijf.getTotaalBedrijven();
-            int bedrijfsgrootte1WerkzaamPersoon = bedrijf.getBedrijfsgrootte1WerkzaamPersoon();
-            int bedrijfsgrootte2WerkzaamPersoon = bedrijf.getBedrijfsgrootte2WerkzaamPersoon();
-            int bedrijfsgrootte3tot5WerkzaamPersoon = bedrijf.getBedrijfsgrootte3tot5WerkzaamPersoon();
-            int bedrijfsgrootte5tot10WerkzaamPersoon = bedrijf.getBedrijfsgrootte5tot10WerkzaamPersoon();
-            int bedrijfsgrootte10tot20WerkzaamPersoon = bedrijf.getBedrijfsgrootte10tot20WerkzaamPersoon();
-            int bedrijfsgrootte20tot50WerkzaamPersoon = bedrijf.getBedrijfsgrootte20tot50WerkzaamPersoon();
-            int bedrijfsgrootte50tot100WerkzaamPersoon = bedrijf.getBedrijfsgrootte50tot100WerkzaamPersoon();
-            int natuurlijkPersoon = bedrijf.getNatuurlijkPersoon();
-            int rechtsPersoon = bedrijf.getRechtsPersoon();
-
             stmt.executeUpdate("INSERT INTO financieel_branche_overzicht_bedrijven(OverzichtID, Branche, Periode, Totaal_aantal_bedrijven, " +
                                     "Bedrijfsgrootte_1_werkzaam_persoon, Bedrijfsgrootte_2_werkzame_personen, Bedrijfsgrootte_3_tot_5_werkzame_personen, " +
                                     "Bedrijfsgrootte_5_tot_10_werkzame_personen, Bedrijfsgrootte_10_tot_20_werkzame_personen, Bedrijfsgrootte_20_tot_50_werkzame_personen, " +
                                     "Bedrijfsgrootte_50_tot_100_werkzame_personen, Natuurlijke_personen, Rechtspersonen) " +
-                                    "VALUES ("+overzichtID+",'"+branche+"','"+periode+"',"+totaalBedrijven+"," +
-                                    bedrijfsgrootte1WerkzaamPersoon+","+bedrijfsgrootte2WerkzaamPersoon+","+bedrijfsgrootte3tot5WerkzaamPersoon+"," +
-                                    bedrijfsgrootte5tot10WerkzaamPersoon+","+bedrijfsgrootte10tot20WerkzaamPersoon+","+bedrijfsgrootte20tot50WerkzaamPersoon+"," +
-                                    bedrijfsgrootte50tot100WerkzaamPersoon+","+natuurlijkPersoon+","+rechtsPersoon+")");
+                                    "VALUES ("+bedrijf.getOverzichtID()+",'"+bedrijf.getBranche()+"','"+bedrijf.getPeriode()+"',"+bedrijf.getTotaalBedrijven()+"," +
+                                    bedrijf.getBedrijfsgrootte1WerkzaamPersoon()+","+bedrijf.getBedrijfsgrootte2WerkzaamPersoon()+","+bedrijf.getBedrijfsgrootte3tot5WerkzaamPersoon()+"," +
+                                    bedrijf.getBedrijfsgrootte5tot10WerkzaamPersoon()+","+bedrijf.getBedrijfsgrootte10tot20WerkzaamPersoon()+","+bedrijf.getBedrijfsgrootte20tot50WerkzaamPersoon()+"," +
+                                    bedrijf.getBedrijfsgrootte50tot100WerkzaamPersoon()+","+bedrijf.getNatuurlijkPersoon()+","+bedrijf.getRechtsPersoon()+")");
 
             getDBConnection().close();
         }

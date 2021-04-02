@@ -30,7 +30,8 @@ public class APIBedrijven
                         @JsonProperty("bedrijfsgrootte_20_tot_50_werkzame_personen") int bedrijfsgrootte20tot50WerkzaamPersoon,
                         @JsonProperty("bedrijfsgrootte_50_tot_100_werkzame_personen") int bedrijfsgrootte50tot100WerkzaamPersoon,
                         @JsonProperty("rechtsvorm_natuurlijkePersonen") int natuurlijkPersoon,
-                        @JsonProperty("rechtsvorm_rechtsPersonen") int rechtsPersoon) {
+                        @JsonProperty("rechtsvorm_rechtsPersonen") int rechtsPersoon)
+    {
         this.overzichtID = overzichtID;
         this.branche = branche;
         this.periode = periode;

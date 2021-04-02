@@ -40,13 +40,9 @@ public class DBFaillissementen extends DBConnect
         try{
             stmt = getDBConnection().createStatement();
 
-            int overzichtID = faillissement.getOverzichtID();
-            String typeGefailleerd = faillissement.getTypeGefailleerd();
-            String branche = faillissement.getBranche();
-            String periode = faillissement.getPeriode();
-            int uitgesprokenFaillissementen = faillissement.getUitgesprokenFaillissementen();
-
-            stmt.executeUpdate("INSERT INTO financieel_branche_overzicht_faillissementen(OverzichtID, Type_gefailleerde, Branche, Periode, Uitgesproken_faillissementen) VALUES ("+overzichtID+",'"+typeGefailleerd+"','"+branche+"','"+periode+"',"+uitgesprokenFaillissementen+")");
+            stmt.executeUpdate("INSERT INTO financieel_branche_overzicht_faillissementen(OverzichtID, Type_gefailleerde, Branche, Periode, Uitgesproken_faillissementen) " +
+                                    "VALUES ("+faillissement.getOverzichtID()+",'"+faillissement.getTypeGefailleerd()+"','"+faillissement.getBranche()+"'," +
+                                    "'"+faillissement.getPeriode()+"',"+faillissement.getUitgesprokenFaillissementen()+")");
 
             getDBConnection().close();
         }
@@ -76,7 +72,9 @@ public class DBFaillissementen extends DBConnect
         try{
             stmt = getDBConnection().createStatement();
 
-            stmt.executeUpdate("UPDATE financieel_branche_overzicht_faillissementen SET OverzichtID="+faillissement.getOverzichtID()+",Type_gefailleerde='"+faillissement.getTypeGefailleerd()+"',Branche='"+faillissement.getBranche()+"',Periode='"+faillissement.getPeriode()+"',Uitgesproken_faillissementen='"+faillissement.getUitgesprokenFaillissementen()+"' WHERE OverzichtID="+faillissement.getOverzichtID());
+            stmt.executeUpdate("UPDATE financieel_branche_overzicht_faillissementen SET OverzichtID="+faillissement.getOverzichtID()+",Type_gefailleerde='"+faillissement.getTypeGefailleerd()+"'," +
+                                    "Branche='"+faillissement.getBranche()+"',Periode='"+faillissement.getPeriode()+"',Uitgesproken_faillissementen='"+faillissement.getUitgesprokenFaillissementen()+"' " +
+                                    "WHERE OverzichtID="+faillissement.getOverzichtID());
 
             getDBConnection().close();
         }
