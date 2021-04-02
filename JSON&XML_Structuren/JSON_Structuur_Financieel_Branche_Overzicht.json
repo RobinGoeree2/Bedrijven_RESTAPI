@@ -4,6 +4,8 @@
 		"branche": "",
 		"bedrijven": [
 			{
+				"overzichtID": 0,
+				"branche": "",
 				"periode": "",
 				"totaal_bedrijven": "",
 				"bedrijfsgrootte_1_werkzaam_persoon": "",
@@ -19,14 +21,18 @@
 		],
 		"investeringen": [
 			{
+				"overzichtID": 0,
+				"branche": "",
 				"periode": "",
 				"investeringen_in_materiële_vaste_activa": ""
 			}
 		],
 		"faillissementen": [
 			{
-				"periode": "",
+				"overzichtID": 0,
 				"type_gefailleerde": "",
+				"branche": "",
+				"periode": "",
 				"uitgesproken_faillissementen": 0
 			}
 		]

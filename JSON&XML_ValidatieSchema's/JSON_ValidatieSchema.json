@@ -13,12 +13,16 @@
 			"description": "Een bedrijfs branche uit de gekozen SbI van 2008",
 			"type": "string"
 		},
-		"periode": {
-			"description": "Kan bestaan uit een maand-, kwaartal van/of een jaartal",
-			"type": "string"
-		},
 		"bedrijven": [
 			{
+				"overzichtID": {
+					"description": "De unieke identifier voor de gegevens",
+					"type": "integer"
+				},
+				"branche": {
+					"description": "Een bedrijfs branche uit de gekozen SbI van 2008",
+					"type": "string"
+				},
 				"periode": {
 					"description": "Kan bestaan uit een maand-, kwaartal van/of een jaartal",
 					"type": "string"
@@ -67,6 +71,14 @@
 		],
 		"investeringen": [
 			{
+				"overzichtID": {
+					"description": "De unieke identifier voor de gegevens",
+					"type": "integer"
+				},
+				"branche": {
+					"description": "Een bedrijfs branche uit de gekozen SbI van 2008",
+					"type": "string"
+				},
 				"periode": {
 					"description": "Kan bestaan uit een maand-, kwaartal van/of een jaartal",
 					"type": "string"
@@ -79,12 +91,20 @@
 		],
 		"faillissementen": [
 			{
-				"periode": {
-					"description": "Kan bestaan uit een maand-, kwaartal van/of een jaartal",
-					"type": "string"
+				"overzichtID": {
+					"description": "De unieke identifier voor de gegevens",
+					"type": "integer"
 				},
 				"type_gefailleerde": {
 					"description": "Het type bedrijf dat gefailleerd is",
+					"type": "string"
+				},
+				"branche": {
+					"description": "Een bedrijfs branche uit de gekozen SbI van 2008",
+					"type": "string"
+				},
+				"periode": {
+					"description": "Kan bestaan uit een maand-, kwaartal van/of een jaartal",
 					"type": "string"
 				},
 				"uitgesproken_faillissementen": {
