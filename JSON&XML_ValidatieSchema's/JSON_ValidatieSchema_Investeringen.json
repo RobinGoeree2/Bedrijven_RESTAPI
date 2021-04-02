@@ -1,0 +1,26 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "Investeringen",
+	"title": "Investeringen overzicht",
+	"description": "Een overzicht van de materiële vaste activa investering in bedrijven in een branche",
+	"type": "object",
+	"properties": {
+		"overzichtID": {
+			"description": "De unieke identifier voor de gegevens",
+			"type": "integer"
+		},
+		"branche": {
+			"description": "Een bedrijfs branche uit de gekozen SBI van 2008",
+			"type": "string"
+		},
+		"periode": {
+			"description": "Kan bestaan uit een maand-, kwaartal van/of een jaartal",
+			"type": "string"
+		},
+		"investeringen_in_materiële_vaste_activa": {
+			"description": "De investeringen in materiële vaste activa in miljoenen euros",
+			"type": "double"
+		},
+		"required": [ "overzichtID", "branche", "periode", "totaal_bedrijven", "investeringen_in_materiële_vaste_activa" ]
+	}
+}

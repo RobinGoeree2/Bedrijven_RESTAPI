@@ -1,0 +1,30 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "Faillissementen",
+	"title": "Faillissementen overzicht",
+	"description": "Een overzicht van het aantal uitgesproken faillissementen van bedrijven uit een branche",
+	"type": "object",
+	"properties": {
+		"overzichtID": {
+			"description": "De unieke identifier voor de gegevens",
+			"type": "integer"
+		},
+		"type_gefailleerde": {
+			"description": "Het type bedrijf dat gefailleerd is",
+			"type": "string"
+		},
+		"branche": {
+			"description": "Een bedrijfs branche uit de gekozen SBI van 2008",
+			"type": "string"
+		},
+		"periode": {
+			"description": "Kan bestaan uit een maand-, kwaartal van/of een jaartal",
+			"type": "string"
+		},
+		"uitgesproken_faillissementen": {
+			"description": "Het aantal uitgesproken faillissementen van bedrijven",
+			"type": "integer"
+		},
+		"required": [ "overzichtID", "branche", "periode", "totaal_bedrijven", "type_gefailleerde", "uitgesproken_faillissementen" ]
+	}
+}

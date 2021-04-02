@@ -1,0 +1,34 @@
+{
+	"FinancieelBrancheOverzicht": {
+		"overzichtID": 0,
+		"branche": "",
+		"bedrijven": [
+			{
+				"periode": "",
+				"totaal_bedrijven": "",
+				"bedrijfsgrootte_1_werkzaam_persoon": "",
+				"bedrijfsgrootte_2_werkzame_personen": 0,
+				"bedrijfsgrootte_3_tot_5_werkzame_personen": 0,
+				"bedrijfsgrootte_5_tot_10_werkzame_personen": 0,
+				"bedrijfsgrootte_10_tot_20_werkzame_personen": 0,
+				"bedrijfsgrootte_20_tot_50_werkzame_personen": 0,
+				"bedrijfsgrootte_50_tot_100_werkzame_personen": 0,
+				"rechtsvorm_natuurlijkepersonen": "",
+				"rechtsvorm_rechtspersonen": 0
+			}
+		],
+		"investeringen": [
+			{
+				"periode": "",
+				"investeringen_in_materiële_vaste_activa": ""
+			}
+		],
+		"faillissementen": [
+			{
+				"periode": "",
+				"type_gefailleerde": "",
+				"uitgesproken_faillissementen": 0
+			}
+		]
+	}
+}

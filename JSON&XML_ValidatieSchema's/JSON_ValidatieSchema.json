@@ -1,73 +1,98 @@
 {
 	"$schema": "http://json-schema.org/draft-07/schema#",
-	"$id": "FinancieelBrancheOverzicht",
-	"title": "Financieel Branche Overzicht",
-	"description": "Een overzicht over de fininciele zaken van bedrijven uit verschillende branches",
+	"$id": "FinancieelbrancheOverzicht",
+	"title": "Financieel branche Overzicht",
+	"description": "Een overzicht over de fininciele zaken van bedrijven van een branche",
 	"type": "object",
 	"properties": {
-	"OverzichtID": {
-		"description": "De unieke identifier voor de gegevens",
-		"type": "integer"
-	},
-	"Bedrijfstakken/branches_SBI_2008": {
-		"description": "Een bedrijfs branche uit de gekozen SBI van 2008",
-		"type": "string"
-	},
-	"Perioden": {
-		"description": "Kan bestaan uit een maand-, kwaartal van/of een jaartal",
-		"type": "string"
-	},
-	"Totaal_bedrijven": {
-		"description": "Het totaal aantal geregistreerde bedrijven in de branche",
-		"type": "integer"
-	},
-	"Bedrijfsgrootte_1_werkzaam_persoon": {
-		"description": "Het totaal aantal bedrijven wat beschikt over 1 werkzaam persoon",
-		"type": "integer"
-	},
-	"Bedrijfsgrootte_2_werkzame_personen": {
-		"description": "Het totaal aantal bedrijven wat beschikt over 2 werkzame personen",
-		"type": "integer"
-	},
-	"Bedrijfsgrootte_3_tot_5_werkzame_personen": {
-		"description": "Het totaal aantal bedrijven wat beschikt over 3 tot 5 werkzame personen",
-		"type": "integer"
-	},
-	"Bedrijfsgrootte_5_tot_10_werkzame_personen": {
-		"description": "Het totaal aantal bedrijven wat beschikt over 5 tot 10 werkzame personen",
-		"type": "integer"
-	},
-	"Bedrijfsgrootte_10_tot_20_werkzame_personen": {
-		"description": "Het totaal aantal bedrijven wat beschikt over 10 tot 20 werkzame personen",
-		"type": "integer"
-	},
-	"Bedrijfsgrootte_20_tot_50_werkzame_personen": {
-		"description": "Het totaal aantal bedrijven wat beschikt over 20 tot 50 werkzame personen",
-		"type": "integer"
-	},
-	"Bedrijfsgrootte_50_tot_100_werkzame_personen": {
-		"description": "Het totaal aantal bedrijven wat beschikt over 50 tot 100 werkzame personen",
-		"type": "integer"
-	},
-	"Rechtsvorm_Natuurlijke_personen": {
-		"description": "Het totaal aantal bedrijven dat een natuurlijke personen rechtsvorm had",
-		"type": "integer"
-	},
-	"Rechtsvorm_Rechtspersonen": {
-		"description": "Het totaal aantal bedrijven dat een rechtspersonen rechtsvorm had",
-		"type": "integer"
-	},
-	"Investeringen_in_materiële_vaste_activa": {
-		"description": "De investeringen in materiële vaste activa in miljoenen euros",
-		"type": "double"
-	},
-	"Type_gefailleerde": {
-		"description": "Het type bedrijf dat gefailleerd is",
-		"type": "string"
-	},
-	"Uitgesproken_faillissementen": {
-		"description": "Het aantal uitgesproken faillissementen van bedrijven",
-		"type": "integer"
-	},
-	"required": [ "OverzichtID", "Bedrijfstakken/branches_SBI_2008", "Perioden", "Totaal_bedrijven", "Rechtsvorm_Natuurlijke_personen", "Rechtsvorm_Rechtspersonen", "Investeringen_in_materiële_vaste_activa", "Type_gefailleerde", "Uitgesproken_faillissementen", ]
+		"overzichtID": {
+			"description": "De unieke identifier voor de gegevens",
+			"type": "integer"
+		},
+		"branche": {
+			"description": "Een bedrijfs branche uit de gekozen SbI van 2008",
+			"type": "string"
+		},
+		"periode": {
+			"description": "Kan bestaan uit een maand-, kwaartal van/of een jaartal",
+			"type": "string"
+		},
+		"bedrijven": [
+			{
+				"periode": {
+					"description": "Kan bestaan uit een maand-, kwaartal van/of een jaartal",
+					"type": "string"
+				},
+				"totaal_bedrijven": {
+					"description": "Het totaal aantal geregistreerde bedrijven in de branche",
+					"type": "integer"
+				},
+				"bedrijfsgrootte_1_werkzaam_persoon": {
+					"description": "Het totaal aantal bedrijven wat beschikt over 1 werkzaam persoon",
+					"type": "integer"
+				},
+				"bedrijfsgrootte_2_werkzame_personen": {
+					"description": "Het totaal aantal bedrijven wat beschikt over 2 werkzame personen",
+					"type": "integer"
+				},
+				"bedrijfsgrootte_3_tot_5_werkzame_personen": {
+					"description": "Het totaal aantal bedrijven wat beschikt over 3 tot 5 werkzame personen",
+					"type": "integer"
+				},
+				"bedrijfsgrootte_5_tot_10_werkzame_personen": {
+					"description": "Het totaal aantal bedrijven wat beschikt over 5 tot 10 werkzame personen",
+					"type": "integer"
+				},
+				"bedrijfsgrootte_10_tot_20_werkzame_personen": {
+					"description": "Het totaal aantal bedrijven wat beschikt over 10 tot 20 werkzame personen",
+					"type": "integer"
+				},
+				"bedrijfsgrootte_20_tot_50_werkzame_personen": {
+					"description": "Het totaal aantal bedrijven wat beschikt over 20 tot 50 werkzame personen",
+					"type": "integer"
+				},
+				"bedrijfsgrootte_50_tot_100_werkzame_personen": {
+					"description": "Het totaal aantal bedrijven wat beschikt over 50 tot 100 werkzame personen",
+					"type": "integer"
+				},
+				"rechtsvorm_Natuurlijke_personen": {
+					"description": "Het totaal aantal bedrijven dat een natuurlijke personen rechtsvorm had",
+					"type": "integer"
+				},
+				"rechtsvorm_Rechtspersonen": {
+					"description": "Het totaal aantal bedrijven dat een rechtspersonen rechtsvorm had",
+					"type": "integer"
+				}
+			}
+		],
+		"investeringen": [
+			{
+				"periode": {
+					"description": "Kan bestaan uit een maand-, kwaartal van/of een jaartal",
+					"type": "string"
+				},
+				"investeringen_in_materiële_vaste_activa": {
+					"description": "De investeringen in materiële vaste activa in miljoenen euros",
+					"type": "double"
+				}
+			}
+		],
+		"faillissementen": [
+			{
+				"periode": {
+					"description": "Kan bestaan uit een maand-, kwaartal van/of een jaartal",
+					"type": "string"
+				},
+				"type_gefailleerde": {
+					"description": "Het type bedrijf dat gefailleerd is",
+					"type": "string"
+				},
+				"uitgesproken_faillissementen": {
+					"description": "Het aantal uitgesproken faillissementen van bedrijven",
+					"type": "integer"
+				}
+			}
+		],
+		"required": [ "overzichtID", "branche", "bedrijven", "investeringen", "faillissementen" ]
+	}
 }
