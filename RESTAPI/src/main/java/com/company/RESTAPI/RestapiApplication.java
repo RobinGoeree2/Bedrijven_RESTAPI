@@ -26,6 +26,10 @@ public class RestapiApplication
 	// API commands voor financieel branche overzicht //
 	////////////////////////////////////////////////////
 
+	/**
+	 * Returnt een overzicht van alle financiele gegevens van de branches in de database
+	 * @return
+	 */
 	@GetMapping("/restapi/v1/financieelBrancheOverzicht")
 	public ArrayList<APIFinancieelBrancheOverzicht> getfinancieelBrancheOverzichten()
 	{
@@ -86,12 +90,20 @@ public class RestapiApplication
 	// API commands voor tabel bedrijven //
 	///////////////////////////////////////
 
+	/**
+	 * GET alle gegevens van de bedrijven
+	 * @return
+	 */
 	@GetMapping("/restapi/v1/bedrijven")
 	public ArrayList<APIBedrijven> getBedrijven()
 	{
 		return dbBedrijven.allBedrijven();
 	}
 
+	/**
+	 * POST alle gegevens van branche dat is meegegeven
+	 * @param bedrijf gegevens van de branche
+	 */
 	@PostMapping
 	@RequestMapping("restapi/v1/bedrijven")
 	public void addBedrijf(@RequestBody APIBedrijven bedrijf)
@@ -99,12 +111,20 @@ public class RestapiApplication
 		dbBedrijven.addBedrijf(bedrijf);
 	}
 
+	/**
+	 * DELETE alle gegevens van de branche op een specifieke ID
+	 * @param id specifieke ID waarop verwijderd moet worden
+	 */
 	@DeleteMapping("restapi/v1/bedrijven/{id}")
 	public void deleteBedrijfOnID(@PathVariable("id") int id)
 	{
 		dbBedrijven.delBedrijf(id);
 	}
 
+	/**
+	 * PUT de gegevens van de branche op een specifieke ID
+	 * @param bedrijf nieuwe gegevens van de branche
+	 */
 	@PutMapping("restapi/v1/bedrijven")
 	public void updateBedrijfOnID(@RequestBody APIBedrijven bedrijf)
 	{
@@ -115,12 +135,20 @@ public class RestapiApplication
 	// API commands voor tabel faillissementen //
 	/////////////////////////////////////////////
 
+	/**
+	 * GET alle gegevens van de faillissementen
+	 * @return
+	 */
 	@GetMapping("/restapi/v1/faillissementen")
 	public ArrayList<APIFaillissementen> getFaillissementen()
 	{
 		return dbFaillissementen.allFaillissementen();
 	}
 
+	/**
+	 * POST alle gegevens van faillissement dat is meegegeven
+	 * @param faillissement gegevens van de faillissement
+	 */
 	@PostMapping
 	@RequestMapping("restapi/v1/faillissementen")
 	public void addFaillissement(@RequestBody APIFaillissementen faillissement)
@@ -128,12 +156,20 @@ public class RestapiApplication
 		dbFaillissementen.addFaillissement(faillissement);
 	}
 
+	/**
+	 * DELETE alle gegevens van het faillissement op een specifieke ID
+	 * @param id specifieke ID waarop verwijderd moet worden
+	 */
 	@DeleteMapping("restapi/v1/faillissementen/{id}")
 	public void deleteFaillissementenOnID(@PathVariable("id") int id)
 	{
 		dbFaillissementen.delFaillissement(id);
 	}
 
+	/**
+	 * PUT de gegevens van het faillissement op een specifieke ID
+	 * @param faillissement nieuwe gegevens van het faillissement
+	 */
 	@PutMapping("restapi/v1/faillissementen")
 	public void updateFaillissementOnID(@RequestBody APIFaillissementen faillissement)
 	{
@@ -144,12 +180,20 @@ public class RestapiApplication
 	// API commands voor tabel investeringen //
 	///////////////////////////////////////////
 
+	/**
+	 * GET alle gegevens van de investeringen
+	 * @return
+	 */
 	@GetMapping("/restapi/v1/investeringen")
 	public ArrayList<APIInvesteringen> getInvesteringen()
 	{
 		return dbInvesteringen.allInvesteringen();
 	}
 
+	/**
+	 * POST alle gegevens van de investering dat is meegegeven
+	 * @param investering gegevens van de investering
+	 */
 	@PostMapping
 	@RequestMapping("restapi/v1/investeringen")
 	public void addInvestering(@RequestBody APIInvesteringen investering)
@@ -157,12 +201,20 @@ public class RestapiApplication
 		dbInvesteringen.addInvestering(investering);
 	}
 
+	/**
+	 * DELETE alle gegevens van de investering op een specifieke ID
+	 * @param id specifieke ID waarop verwijderd moet worden
+	 */
 	@DeleteMapping("restapi/v1/investeringen/{id}")
 	public void deleteInvesteringOnID(@PathVariable("id") int id)
 	{
 		dbInvesteringen.delInvestering(id);
 	}
 
+	/**
+	 * PUT de gegevens van de investering op een specifieke ID
+	 * @param investering nieuwe gegevens van de investering
+	 */
 	@PutMapping("restapi/v1/investeringen")
 	public void updateInvesteringOnID(@RequestBody APIInvesteringen investering)
 	{
